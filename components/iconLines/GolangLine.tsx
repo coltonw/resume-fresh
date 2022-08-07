@@ -1,6 +1,5 @@
 /** @jsx h */
-/** @jsxFrag Fragment */
-import { h, Fragment } from "preact";
+import { h } from "preact";
 import { tw } from "@twind";
 import IconLine from "../IconLine.tsx";
 import LineDate from "../LineDate.tsx";
@@ -23,7 +22,7 @@ const GolangLine = () => (
             <path id="go-original-a" d="M18.8 1h90.5v126H18.8z"></path>
           </defs>
           <clipPath id="go-original-b">
-            <use xlink:href="#go-original-a" overflow="visible"></use>
+            <use xlinkHref="#go-original-a" overflow="visible"></use>
           </clipPath>
           <path
             fill-rule="evenodd"

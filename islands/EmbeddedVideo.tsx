@@ -47,9 +47,7 @@ const isVideoVisible = (
     const boundingClientRect = nodeRef.getBoundingClientRect();
     const windowHeight = window.innerHeight || html.clientHeight;
 
-    console.log("isVideoVisible", nodeRef, boundingClientRect, windowHeight);
     const isVisible = checkIsVisible(boundingClientRect, windowHeight);
-    console.log("isVideoVisible", isVisible);
     setIsVisible(isVisible);
   }, 0);
 };
@@ -78,9 +76,7 @@ const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
   useEffect(() => {
     if (!videoRef.current) return;
     const videoElement = videoRef.current;
-    console.log(`set can play ${videoRef.current}`);
     videoElement.oncanplaythrough = (e) => {
-      console.log(`set canplay true`);
       setCanPlay(true);
     };
 
@@ -104,9 +100,6 @@ const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
       setPlayed(true);
     }
   }, [isVisible, loading, canPlay, played, setLoading, setPlaying, setPlayed]);
-  console.log(
-    `isVisible ${isVisible} canPlay ${canPlay} playing ${playing} played ${played}`
-  );
   return (
     <div class={tw`relative my-6 border-2 border-warmGray-200`}>
       {!playing && played && (
