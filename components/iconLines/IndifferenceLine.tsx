@@ -6,7 +6,13 @@ import LineIcon from "../LineIcon.tsx";
 import SubHeading from "../SubHeading.tsx";
 import SubHeadingTitle from "../SubHeadingTitle.tsx";
 import NodeJs from "../svgs/NodeJs.tsx";
+import Express from "../svgs/Express.tsx";
+import Npm from "../svgs/Npm.tsx";
+import MongoDB from "../svgs/MongoDB.tsx";
+import Heroku from "../svgs/Heroku.tsx";
+import Mocha from "../svgs/Mocha.tsx";
 import TravisCI from "../svgs/TravisCI.tsx";
+import Bootstrap from "../svgs/Bootstrap.tsx";
 import { iconClassName } from "./util.ts";
 
 const IndifferenceLine = () => (
@@ -17,36 +23,28 @@ const IndifferenceLine = () => (
       <LineIcon title="Node.js" href="https://nodejs.org/en/">
         <NodeJs class={iconClassName()} />
       </LineIcon>
-      {/* <LineIcon title="Express" href="https://expressjs.com/">
-        <div
-          className="flex-none mx-2 text-stone-700"
-          style={{
-            fontFamily: "helvetica neue,open sans,sans-serif",
-            fontWeight: 100,
-          }}
-        >
-          ex
-        </div>
+      <LineIcon title="Express" href="https://expressjs.com/">
+        <Express class={iconClassName()} />
       </LineIcon>
       <LineIcon title="npm" href="https://www.npmjs.com/">
-        <DiNpm className={`${iconClassName()} text-red-600`} />
+        <Npm class={iconClassName()} />
       </LineIcon>
       <LineIcon title="MongoDB" href="https://www.mongodb.com/">
-        <MongoDBLogo className={iconClassName()} />
+        <MongoDB class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Heroku" href="https://www.heroku.com/">
-        <DiHeroku className={iconClassName()} style={{ color: "#79589F" }} />
+        <Heroku class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Mocha" href="https://mochajs.org/">
-        <MochaLogo className={iconClassName()} />
+        <Mocha class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Travis CI" href="https://www.travis-ci.com/">
-        <TravisCI className={iconClassName()} />
+        <TravisCI class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Bootstrap" href="https://getbootstrap.com/">
-        <DiBootstrap className={iconClassName()} style={{ color: "#7952b3" }} />
+        <Bootstrap class={iconClassName()} />
       </LineIcon>
-      <LineIcon title="Dust.js" href="https://www.dustjs.com/">
+      {/* <LineIcon title="Dust.js" href="https://www.dustjs.com/">
         <div
           class={tw`flex-none mx-2 text-stone-700`}
           style={{
