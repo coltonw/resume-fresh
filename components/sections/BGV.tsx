@@ -23,7 +23,12 @@ const BGV = () => {
         </Link>
         .
       </Paragraph>
-      <EmbeddedImage src={"/bgv.png"} alt="Indifference Engine Screenshot" />
+      <EmbeddedImage
+        src="/bgv.png"
+        alt="Indifference Engine Screenshot"
+        width={752}
+        height={557}
+      />
       <Paragraph>
         I spent quite a bit more time on this project and learned about Node.js,
         Express, publishing packages on npm, MongoDB, Heroku, unit testing in

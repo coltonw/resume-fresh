@@ -15,6 +15,8 @@ const Header = () => {
               class={tw`h-8 inline align-middle`}
               src="/logo.svg"
               alt="Will Colton Logo"
+              width={32}
+              height={32}
             />
             <span
               class={tw`align-middle hidden sm:inline pl-2 text-l font-black text-blue-gray-400`}
