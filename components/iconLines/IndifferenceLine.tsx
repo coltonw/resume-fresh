@@ -1,5 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
+import { tw } from "@twind";
 import IconLine from "../IconLine.tsx";
 import LineDate from "../LineDate.tsx";
 import LineIcon from "../LineIcon.tsx";
@@ -44,17 +45,11 @@ const IndifferenceLine = () => (
       <LineIcon title="Bootstrap" href="https://getbootstrap.com/">
         <Bootstrap class={iconClassName()} />
       </LineIcon>
-      {/* <LineIcon title="Dust.js" href="https://www.dustjs.com/">
-        <div
-          class={tw`flex-none mx-2 text-stone-700`}
-          style={{
-            fontFamily: "Dosis,sans-serif",
-            fontWeight: 100,
-          }}
-        >
+      <LineIcon title="Dust.js" href="https://www.dustjs.com/">
+        <div class={tw`flex-none mx-2 text-warmGray-700 text-sm font-thin`}>
           Dust.js
         </div>
-      </LineIcon> */}
+      </LineIcon>
     </IconLine>
   </SubHeading>
 );

@@ -2,13 +2,37 @@ if (Deno.args.length <= 0) {
   console.log("Needs an svg name arg");
 }
 
-const svgFilename = Deno.args[1] || `${Deno.args[0]}-original.svg`;
+const svgUrls = [];
+if (Deno.args[1]) {
+  svgUrls.push(
+    Deno.args[1].startsWith("http")
+      ? Deno.args[1]
+      : `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${Deno.args[1]}`
+  );
+} else {
+  svgUrls.push(
+    `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${Deno.args[0]}-original.svg`
+  );
+  svgUrls.push(
+    `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${Deno.args[0]}-plain.svg`
+  );
+  svgUrls.push(
+    `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${Deno.args[0]}-original-wordmark.svg`
+  );
+  svgUrls.push(
+    `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${Deno.args[0]}-plain-wordmark.svg`
+  );
+}
 
-const svgResp = await fetch(
-  `https://raw.githubusercontent.com/devicons/devicon/master/icons/${Deno.args[0]}/${svgFilename}`
-);
+let svgResp = undefined;
+while (svgUrls.length > 0) {
+  svgResp = await fetch(svgUrls.shift() as string);
+  if (svgResp.ok) {
+    break;
+  }
+}
 
-if (!svgResp.ok) {
+if (!svgResp || !svgResp.ok) {
   Deno.exit(1);
 }
 
@@ -40,7 +64,7 @@ await Deno.writeTextFile(
   output
 );
 
-Deno.run({
+const prettier = Deno.run({
   cmd: [
     "npx",
     "prettier",
@@ -48,3 +72,4 @@ Deno.run({
     `./components/svgs/${capitalize(Deno.args[0])}.tsx`,
   ],
 });
+await prettier.status();

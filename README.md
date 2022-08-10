@@ -16,4 +16,5 @@ Made a quick tool that allows me to turn svgs from [DEVICON](https://devicon.dev
 
 ```
 deno run --allow-net --allow-write --allow-run svgify.ts mocha mocha-plain.svg
+deno run --allow-net --allow-write --allow-run svgify.ts koa https://simpleicons.org/icons/koa.svg
 ```

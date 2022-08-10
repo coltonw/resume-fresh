@@ -5,6 +5,14 @@ import LineDate from "../LineDate.tsx";
 import LineIcon from "../LineIcon.tsx";
 import SubHeading from "../SubHeading.tsx";
 import SubHeadingTitle from "../SubHeadingTitle.tsx";
+import Elixir from "../svgs/Elixir.tsx";
+import Phoenix from "../svgs/Phoenix.tsx";
+import CircleCI from "../svgs/CircleCI.tsx";
+import Aws from "../svgs/Aws.tsx";
+import React from "../svgs/React.tsx";
+import Nivo from "../svgs/Nivo.tsx";
+import Bulma from "../svgs/Bulma.tsx";
+import Webpack from "../svgs/Webpack.tsx";
 import { iconClassName } from "./util.ts";
 
 const JudgementLine = () => (
@@ -12,33 +20,33 @@ const JudgementLine = () => (
     <SubHeadingTitle>Majority Judgment</SubHeadingTitle>
     <IconLine>
       <LineDate>2019</LineDate>
-      {/* <LineIcon title="elixir" href="https://elixir-lang.org/">
-        <ElixirLogo className={iconClassName()} />
+      <LineIcon title="elixir" href="https://elixir-lang.org/">
+        <Elixir class={iconClassName()} />
       </LineIcon>
       <LineIcon
         title="Phoenix Framework"
         href="https://www.phoenixframework.org/"
       >
-        <PhoenixLogo className={`${iconClassName()} w-12`} />
+        <Phoenix class={`${iconClassName()} w-12`} />
       </LineIcon>
       <LineIcon title="CircleCI" href="https://circleci.com/">
-        <CircleCILogo className={iconClassName()} />
+        <CircleCI class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Amazon Web Services" href="https://aws.amazon.com/">
-        <FaAws className={iconClassName()} />
+        <Aws class={iconClassName()} />
       </LineIcon>
       <LineIcon title="React" href="https://reactjs.org/">
-        <DiReact className={iconClassName()} style={{ color: "#61dafb" }} />
+        <React class={iconClassName()} />
       </LineIcon>
       <LineIcon title="nivo" href="https://nivo.rocks/">
-        <NivoLogo className={iconClassName()} />
+        <Nivo class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Bulma" href="https://bulma.io/">
-        <BulmaLogo className={iconClassName()} />
+        <Bulma class={iconClassName()} />
       </LineIcon>
       <LineIcon title="Webpack" href="https://webpack.js.org/">
-        <WebpackLogo className={iconClassName()} />
-      </LineIcon> */}
+        <Webpack class={iconClassName()} />
+      </LineIcon>
     </IconLine>
   </SubHeading>
 );
