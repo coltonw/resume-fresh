@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from "preact";
+import { h, Ref } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 import { throttle } from "lodash-es";
 import { tw } from "@twind";
@@ -8,6 +8,8 @@ import Redo from "../components/svgs/Redo.tsx";
 interface EmbeddedVideoProps {
   webm: string;
   mp4: string;
+  width?: number;
+  height?: number;
 }
 
 // Code modified from https://github.com/fkhadra/react-on-screen
@@ -52,8 +54,8 @@ const isVideoVisible = (
   }, 0);
 };
 
-const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
-  const videoRef: React.Ref<HTMLVideoElement> = useRef(null);
+const EmbeddedVideo = ({ webm, mp4, width, height }: EmbeddedVideoProps) => {
+  const videoRef: Ref<HTMLVideoElement> = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [played, setPlayed] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -64,13 +66,13 @@ const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
     const throttledIsVideoVisible = throttle(
       () => isVideoVisible(videoNode, setIsVisible),
       250
-    );
-    window.addEventListener("scroll", throttledIsVideoVisible);
-    window.addEventListener("resize", throttledIsVideoVisible);
+    ) as () => void;
+    self.addEventListener("scroll", throttledIsVideoVisible);
+    self.addEventListener("resize", throttledIsVideoVisible);
 
     return () => {
-      window.removeEventListener("scroll", throttledIsVideoVisible);
-      window.removeEventListener("resize", throttledIsVideoVisible);
+      self.removeEventListener("scroll", throttledIsVideoVisible);
+      self.removeEventListener("resize", throttledIsVideoVisible);
     };
   }, []);
   useEffect(() => {
@@ -100,11 +102,19 @@ const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
       setPlayed(true);
     }
   }, [isVisible, loading, canPlay, played, setLoading, setPlaying, setPlayed]);
+
+  // Note: in my brief experimentation, aspectRatio on the parent did a better job preventing layout shift than anything I could do on the video itself
   return (
-    <div class={tw`relative my-6 border-2 border-warmGray-200`}>
+    <div
+      class={tw`relative my-6 border-2 border-warmGray-200`}
+      style={{
+        aspectRatio:
+          width && height ? `${width + 4} / ${height + 4}` : undefined,
+      }}
+    >
       {!playing && played && (
         <Redo
-          class={`fas fa-redo-alt ${tw`absolute inset-0 m-auto w-16 h-16 text-5xl bg-warmGray-100 p-2 rounded-lg text-warmGray-800 cursor-pointer`}`}
+          class={tw`absolute inset-0 m-auto w-16 h-16 text-5xl bg-warmGray-100 p-2 rounded-lg text-warmGray-800 cursor-pointer`}
         />
       )}
       <video
@@ -117,6 +127,8 @@ const EmbeddedVideo = ({ webm, mp4 }: EmbeddedVideoProps) => {
             videoRef.current.play();
           }
         }}
+        width={width}
+        height={height}
       >
         <source type="video/webm" src={webm} />
         <source type="video/mp4" src={mp4} />

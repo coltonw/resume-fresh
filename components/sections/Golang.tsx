@@ -22,7 +22,12 @@ const Golang = () => {
         and then eventually landed on a (highly questionable){" "}
         <Link href="https://play.golang.org/p/KG0KlWWbNFc">blend of both</Link>.
       </Paragraph>
-      <EmbeddedVideo webm="/videos/godemo3.webm" mp4="/videos/godemo3.mp4" />
+      <EmbeddedVideo
+        webm="/videos/godemo.webm"
+        mp4="/videos/godemo.mp4"
+        width={748}
+        height={450}
+      />
     </>
   );
 };

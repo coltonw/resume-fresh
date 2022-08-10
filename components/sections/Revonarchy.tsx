@@ -24,6 +24,8 @@ const Revonarchy = () => {
       <EmbeddedVideo
         webm={"/videos/revonarchy.webm"}
         mp4={"/videos/revonarchy.mp4"}
+        width={922}
+        height={580}
       />
       <Paragraph>
         Revonarchy was relatively short lived but I still learned some great

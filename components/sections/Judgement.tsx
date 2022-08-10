@@ -26,6 +26,8 @@ const Judgement = () => {
       <EmbeddedVideo
         webm={"/videos/judgement.webm"}
         mp4={"/videos/judgement.mp4"}
+        width={1030}
+        height={810}
       />
       <Paragraph>
         After learning a lot of frontend work in my day job, this project became
