@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h } from "preact";
 import Layout from "../components/Layout.tsx";
+import Link from "../components/Link.tsx";
 import Intro from "../components/sections/Intro.tsx";
 import VotingIntro from "../components/sections/VotingIntro.tsx";
 import Golang from "../components/sections/Golang.tsx";
@@ -15,10 +16,13 @@ import DanyconSchedule from "../components/sections/DanyconSchedule.tsx";
 import Museum from "../components/sections/Museum.tsx";
 import Outro from "../components/sections/Outro.tsx";
 
-export default function Home() {
+const Home = () => {
   return (
     <Layout>
       <Intro />
+      <div>
+        <Link href="/tldr">TL;DR</Link>
+      </div>
       <VotingIntro />
       <Golang />
       <BGV />
@@ -33,4 +37,6 @@ export default function Home() {
       <Outro />
     </Layout>
   );
-}
+};
+
+export default Home;
