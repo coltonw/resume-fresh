@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Github from "./svgs/Github.tsx";
+import Wkc from "./svgs/Wkc.tsx";
 
 const Header = () => {
   return (
@@ -11,13 +12,7 @@ const Header = () => {
       <div class={tw`flex items-center justify-between p-0`}>
         <div>
           <a href="/">
-            <img
-              class={tw`h-8 inline align-middle`}
-              src="/logo.svg"
-              alt="Will Colton Logo"
-              width={32}
-              height={32}
-            />
+            <Wkc class={tw`w-8 h-8 inline align-middle`} />
             <span
               class={tw`align-middle hidden sm:inline pl-2 text-l font-black text-blue-gray-400`}
             >

@@ -10,6 +10,10 @@ import Judgement from "../components/sections/Judgement.tsx";
 import SensorsAreDown from "../components/sections/SensorsAreDown.tsx";
 import ICG from "../components/sections/ICG.tsx";
 import BoatsAndBridges from "../components/sections/BoatsAndBridges.tsx";
+import PuzzleSync from "../components/sections/PuzzleSync.tsx";
+import DanyconSchedule from "../components/sections/DanyconSchedule.tsx";
+import Museum from "../components/sections/Museum.tsx";
+import Outro from "../components/sections/Outro.tsx";
 
 export default function Home() {
   return (
@@ -23,6 +27,10 @@ export default function Home() {
       <SensorsAreDown />
       <ICG />
       <BoatsAndBridges />
+      <PuzzleSync />
+      <DanyconSchedule />
+      <Museum />
+      <Outro />
     </Layout>
   );
 }
