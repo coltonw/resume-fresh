@@ -15,7 +15,7 @@ const Layout: FunctionalComponent = ({ children }) => {
           name="description"
         />
         <link rel="icon" href="/favicon.ico" />
-        <style>{`body{scrollbar-gutter:stable;}`}</style>
+        <style>{`html{scrollbar-gutter:stable;}`}</style>
       </Head>
 
       <div class={tw`max-w-screen-md mx-auto text-lg font-sans p-2`}>
