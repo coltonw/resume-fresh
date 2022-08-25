@@ -26,8 +26,8 @@ const Tldr = () => (
     <JudgementLine />
     <PuzzleSyncLine />
     <BoatsAndBridgesLine />
-    <MuseumLine />
     <DanyconScheduleLine />
+    <MuseumLine />
   </Layout>
 );
 

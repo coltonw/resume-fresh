@@ -14,7 +14,7 @@ const MuseumLine = () => (
   <SubHeading>
     <SubHeadingTitle>Deno Fresh</SubHeadingTitle>
     <IconLine>
-      <LineDate>2020-2022</LineDate>
+      <LineDate>2022</LineDate>
       <LineIcon title="Deno" href="https://deno.land/">
         <Deno class={iconClassName()} />
       </LineIcon>
