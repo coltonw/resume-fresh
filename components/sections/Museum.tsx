@@ -20,7 +20,10 @@ const Museum = () => (
     <Paragraph>
       This museum implementation is built using Deno Fresh. For styling it uses{" "}
       <Link href="https://twind.dev/">Twind</Link> which is a tailwind-in-js
-      solution which came with the Deno Fresh starting template.
+      solution which came with the Deno Fresh starting template. Deno Fresh has
+      been very impressive from a performance standpoint. In my own personal
+      performance testing it handily beats the CRA implementation and even edges
+      out the Sveltekit implementation running on Cloudflare Pages.
     </Paragraph>
   </>
 );
