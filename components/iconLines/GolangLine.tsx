@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
 import IconLine from "../IconLine.tsx";
 import LineDate from "../LineDate.tsx";
 import LineIcon from "../LineIcon.tsx";
@@ -16,7 +13,7 @@ const GolangLine = () => (
       <LineIcon title="Go" href="https://go.dev/">
         <svg
           viewBox="0 0 128 128"
-          class={tw`flex-none w-8 h-8 mx-2 fill-current`}
+          class="flex-none w-8 h-8 mx-2 fill-current"
         >
           <defs>
             <path id="go-original-a" d="M18.8 1h90.5v126H18.8z"></path>

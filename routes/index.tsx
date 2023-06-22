@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import Layout from "../components/Layout.tsx";
 import Link from "../components/Link.tsx";
 import Intro from "../components/sections/Intro.tsx";

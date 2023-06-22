@@ -1,6 +1,4 @@
-/** @jsx h */
-import { h, ComponentChildren } from "preact";
-import { tw } from "@twind";
+import { ComponentChildren } from "preact";
 
 interface LinkProps {
   href?: string;
@@ -12,7 +10,7 @@ const Link = ({ href, onClick, children }: LinkProps) => (
   <a
     href={href}
     onClick={onClick}
-    class={tw`text-warmGray-600 font-bold hover:underline cursor-pointer`}
+    class="text-warmGray-600 font-bold hover:underline cursor-pointer"
   >
     {children}
   </a>

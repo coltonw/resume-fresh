@@ -1,7 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { h, Fragment } from "preact";
-import { tw } from "@twind";
 import SectionHeading from "../SectionHeading.tsx";
 import Paragraph from "../Paragraph.tsx";
 import Link from "../Link.tsx";
@@ -29,8 +25,8 @@ const SensorsAreDown = () => {
         current state. I think I had some good ideas and I have follow-up ideas
         for redesigns but I shelved the game for now.
       </Paragraph>
-      <audio src="/sensorsaredown.mp3" controls class={tw`w-full`} />
-      <div class={tw`text-xs text-center`}>Sorry for poor audio quality</div>
+      <audio src="/sensorsaredown.mp3" controls class="w-full" />
+      <div class="text-xs text-center">Sorry for poor audio quality</div>
       <Paragraph>
         This project involved mostly learning various AWS technologies that go
         into making an Alexa skill. I used an AWS Lambda which I deployed to

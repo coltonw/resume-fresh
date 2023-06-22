@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import IconLine from "../IconLine.tsx";
 import LineDate from "../LineDate.tsx";
 import LineIcon from "../LineIcon.tsx";

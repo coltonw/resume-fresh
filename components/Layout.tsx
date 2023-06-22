@@ -1,10 +1,6 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { h, Fragment, FunctionalComponent } from "preact";
+import { FunctionalComponent } from "preact";
 import { Head } from "$fresh/runtime.ts";
 import Header from "./Header.tsx";
-import { tw } from "@twind";
-
 const Layout: FunctionalComponent = ({ children }) => {
   return (
     <>
@@ -18,7 +14,7 @@ const Layout: FunctionalComponent = ({ children }) => {
         <style>{`html{scrollbar-gutter:stable;}`}</style>
       </Head>
 
-      <div class={tw`max-w-screen-md mx-auto text-lg font-sans p-2`}>
+      <div class="max-w-screen-md mx-auto text-lg font-sans p-2">
         <Header />
         {children}
       </div>

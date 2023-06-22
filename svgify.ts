@@ -48,7 +48,6 @@ function capitalize(s: string) {
 }
 
 const output = `
-/** @jsx h */
 import { h } from "preact";
 import { SvgProps } from "./svg.d.ts";
 

@@ -1,5 +1,4 @@
-/** @jsx h */
-import { h, ComponentChildren } from "preact";
+import { ComponentChildren } from "preact";
 
 interface LineIconProps {
   title: string;

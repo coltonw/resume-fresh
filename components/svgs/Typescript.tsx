@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { SvgProps } from "./svg.d.ts";
 
 const Typescript = ({ class: className }: SvgProps) => (

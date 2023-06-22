@@ -1,8 +1,6 @@
-/** @jsx h */
-import { h, Ref } from "preact";
+import { Ref } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 import { throttle } from "lodash-es";
-import { tw } from "@twind";
 import Redo from "../components/svgs/Redo.tsx";
 
 interface EmbeddedVideoProps {
@@ -106,7 +104,7 @@ const EmbeddedVideo = ({ webm, mp4, width, height }: EmbeddedVideoProps) => {
   // Note: in my brief experimentation, aspectRatio on the parent did a better job preventing layout shift than anything I could do on the video itself
   return (
     <div
-      class={tw`relative my-6 border-2 border-warmGray-200`}
+      class="relative my-6 border-2 border-warmGray-200"
       style={{
         aspectRatio:
           width && height ? `${width + 4} / ${height + 4}` : undefined,
@@ -114,7 +112,7 @@ const EmbeddedVideo = ({ webm, mp4, width, height }: EmbeddedVideoProps) => {
     >
       {!playing && played && (
         <Redo
-          class={tw`absolute inset-0 m-auto w-16 h-16 text-5xl bg-warmGray-100 p-2 rounded-lg text-warmGray-800 cursor-pointer`}
+          class="absolute inset-0 m-auto w-16 h-16 text-5xl bg-warmGray-100 p-2 rounded-lg text-warmGray-800 cursor-pointer"
         />
       )}
       <video

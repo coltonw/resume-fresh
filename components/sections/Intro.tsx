@@ -1,6 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { h, Fragment } from "preact";
 import Paragraph from "../Paragraph.tsx";
 import Link from "../Link.tsx";
 

@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-import { tw } from "@twind";
 import IconLine from "../IconLine.tsx";
 import LineDate from "../LineDate.tsx";
 import LineIcon from "../LineIcon.tsx";
@@ -24,7 +21,7 @@ const BoatsAndBridgesLine = () => (
       </LineIcon>
       <LineIcon title="Lodash" href="https://lodash.com/">
         <div
-          class={tw`flex-none mx-2 text-black underline decoration-blue-600 decoration-2 font-bold`}
+          class="flex-none mx-2 text-black underline decoration-blue-600 decoration-2 font-bold"
           style={{
             textDecorationColor: "#3492FF",
             textDecorationThickness: "2px",

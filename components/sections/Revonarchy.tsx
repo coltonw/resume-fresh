@@ -1,6 +1,3 @@
-/** @jsx h */
-/** @jsxFrag Fragment */
-import { h, Fragment } from "preact";
 import SectionHeading from "../SectionHeading.tsx";
 import RevonarchyLine from "../iconLines/RevonarchyLine.tsx";
 import Paragraph from "../Paragraph.tsx";
